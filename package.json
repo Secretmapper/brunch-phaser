@@ -7,7 +7,9 @@
   "repository": "",
   "scripts": {
     "start": "brunch watch --server",
-    "build": "brunch build --production"
+    "build": "brunch build --production",
+    "format": "prettier-standard",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "phaser": "^3.13.0"
@@ -17,7 +19,18 @@
     "brunch": "^2.10.17",
     "clean-css-brunch": "^2",
     "css-brunch": "^2",
+    "husky": "^1.2.0",
     "javascript-brunch": "^2",
+    "lint-staged": "^8.1.0",
+    "prettier-standard": "^8.0.1",
     "uglify-js-brunch": "^2"
+  },
+  "lint-staged": {
+    "linters": {
+      "app/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
   }
 }
