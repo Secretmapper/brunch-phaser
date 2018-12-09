@@ -38,7 +38,7 @@ window.game = new Phaser.Game({
   // backgroundColor: 0x000000, // black
   loader: {
     // baseURL: '',
-    path: 'assets/',
+    path: 'assets/'
     // maxParallelDownloads: 32
     // crossOrigin: '', // e.g., 'anonymous'
     // timeout: 0
@@ -57,7 +57,7 @@ window.game = new Phaser.Game({
   // },
   callbacks: {
     postBoot: function (game) {
-      console.debug('game.config', game.config);
+      console.debug('game.config', game.config)
     }
   },
   scene: [
@@ -65,5 +65,4 @@ window.game = new Phaser.Game({
     require('scenes/default'),
     require('scenes/menu')
   ]
-
-});
+})
